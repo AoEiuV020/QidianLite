@@ -1,7 +1,6 @@
 package cc.aoeiuv020.qidianlite;
 
 import android.webkit.CookieManager;
-import android.webkit.WebView;
 
 import java.io.UnsupportedEncodingException;
 import java.security.Key;
@@ -32,13 +31,10 @@ public class Utils {
         return stringBuilder.toString();
     }
 
-    public static void setSign(WebView webView, String sign) {
+    public static void setSign(String sign) {
         CookieManager instance = CookieManager.getInstance();
         instance.setAcceptCookie(true);
-        instance.setAcceptThirdPartyCookies(webView, true);
-        instance.acceptThirdPartyCookies(webView);
         instance.setCookie(".qidian.com", "QDSign=" + sign);
-        instance.flush();
     }
 
     @SuppressWarnings("UnnecessaryLocalVariable")

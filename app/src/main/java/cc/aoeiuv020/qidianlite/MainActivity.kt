@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         val url = "http://m.qidian.com"
         var sign = Utils.makeSign(url)
         sign = Uri.encode(Utils.des3(sign).replace(" ", ""))
-        Utils.setSign(wvBook, sign)
+        Utils.setSign(sign)
         wvBook.loadUrl(url)
     }
 
