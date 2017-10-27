@@ -40,7 +40,7 @@ public class Utils {
     @SuppressWarnings("UnnecessaryLocalVariable")
     public static String makeSign(String str) {
         String deviceId = "878788848187878";
-        String id = deviceId;
+        String id = Double.toString(Math.random());
         String sign;
         try {
             sign = md5Hex(str.toLowerCase());
